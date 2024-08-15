@@ -17,6 +17,7 @@ export const structure: StructureResolver = (S) =>
         .icon(CalendarIcon)
         .child(S.documentList().title('Past Events').filter('date < now()')),
       S.divider(),
+      S.documentTypeListItem('event').title('Events').icon(CalendarIcon),
       S.documentTypeListItem('artist').title('Artists').icon(UsersIcon),
       S.documentTypeListItem('venue').title('Venues').icon(PinIcon),
     ])
